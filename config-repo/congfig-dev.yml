@@ -12,3 +12,4 @@ spring:
             - Path=/springcloud-producer/**
           filters:
             - StripPrefix=1
+test: huangsai
