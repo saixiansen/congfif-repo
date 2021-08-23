@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: url-proxy-1
+          uri: https://blog.csdn.net
+          predicates:
+            - Path=/csdn
+        - id: springcloud-producer
+          uri: lb://springcloud-producer
+          predicates:
+            - Path=/springcloud-producer/**
+          filters:
+            - StripPrefix=1
